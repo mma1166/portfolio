@@ -92,20 +92,20 @@
             color: #007BFF;
         }
         .about-content {
-            display: flex; /* Use flexbox for layout */
-            align-items: flex-start; /* Align items at the top */
-            justify-content: space-between; /* Space items evenly */
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-direction: row; /* Ensure it's horizontal by default */
         }
         .profile-picture {
             width: 150px;
             height: 150px;
-            border-radius: 50%; /* Make the picture circular */
+            border-radius: 50%;
             box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-            margin-left: 20px; /* Add some margin to the left of the picture */
         }
         .welcome-text {
-            flex: 1; /* Let the paragraph take remaining space */
-            text-align: justify; /* Justify text */
+            flex: 1;
+            text-align: justify;
         }
         /* Adjustments for smaller screens */
         @media (max-width: 768px) {
@@ -117,8 +117,8 @@
                 margin: 0 auto 20px; /* Center the picture and add margin at the bottom */
             }
             .welcome-text {
-                margin: 0; /* Remove margin for smaller screens */
-                text-align: justify; /* Ensure justified text on smaller screens */
+                margin: 0;
+                text-align: justify;
             }
         }
     </style>
@@ -142,7 +142,7 @@
                     <p>Hello! I'm Md Muntasir Mahmud Amit, currently pursuing my undergraduate studies in Computer Science and Engineering at BRAC University. Beyond my core discipline, I'm passionate about exploring diverse fields. My interests span Software Engineering, Data Science, Artificial Intelligence, Machine Learning, and Natural Language Processing. I actively keep myself updated with the latest trends and advancements in these areas, always seeking opportunities to expand my skill set and make meaningful contributions across different domains. Additionally, I am highly interested in social works and making impactful positive change in the community. Through a range of academic and personal projects, I've showcased my dedication and proficiency in developing innovative tech solutions.</p>
                 </div>
                 <div class="profile-info">
-                    <img src= "Pictures/Md_Muntasir_Mahmud_Amit_Profile_Picture.png" class="profile-picture">
+                    <img src="Pictures/Md_Muntasir_Mahmud_Amit_Profile_Picture.png" class="profile-picture">
                 </div>
             </div>
             <h3>Education</h3>
