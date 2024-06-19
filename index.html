@@ -6,6 +6,7 @@
     <title>Md Muntasir Mahmud Amit - Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+<<<<<<< HEAD
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
@@ -76,6 +77,112 @@
             text-decoration: none;
             margin: 0 10px;
         }
+=======
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f0f8ff;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 90%; /* Limit container to 90% of viewport width */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+header {
+    background: #3471bcfa;
+    color: #fff;
+    padding: 8px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    /* width: 100%; Ensure header is full-width */
+}
+
+header h2 {
+    margin: 0;
+}
+
+nav {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #007BFF;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Adjust width for smaller screens as needed */
+    }
+}
+
+/* Additional styles for other sections */
+section {
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project,
+.work-experience,
+.education {
+    margin-bottom: 20px;
+    background: #e0f7fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+
+>>>>>>> 5637d276ac2d93d79c14b8232df2e92bf9172871
         @keyframes fadeInUp {
             to {
                 opacity: 1;
@@ -92,20 +199,20 @@
             color: #007BFF;
         }
         .about-content {
-            display: flex; /* Use flexbox for layout */
-            align-items: flex-start; /* Align items at the top */
-            justify-content: space-between; /* Space items evenly */
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-direction: row; /* Ensure it's horizontal by default */
         }
         .profile-picture {
             width: 150px;
             height: 150px;
-            border-radius: 50%; /* Make the picture circular */
+            border-radius: 50%;
             box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-            margin-left: 20px; /* Add some margin to the left of the picture */
         }
         .welcome-text {
-            flex: 1; /* Let the paragraph take remaining space */
-            text-align: justify; /* Justify text */
+            flex: 1;
+            text-align: justify;
         }
         /* Adjustments for smaller screens */
         @media (max-width: 768px) {
@@ -117,10 +224,30 @@
                 margin: 0 auto 20px; /* Center the picture and add margin at the bottom */
             }
             .welcome-text {
-                margin: 0; /* Remove margin for smaller screens */
-                text-align: justify; /* Ensure justified text on smaller screens */
+                margin: 0;
+                text-align: justify;
             }
         }
+        .container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Optional, if you want to center vertically as well */
+    height: 40vh; /* Optional, sets container height to full viewport height */
+}
+
+#about {
+    text-align: center; /* Optional, for centering text inside the section */
+}
+
+.profile-info {
+    margin-top: 20px; /* Optional, adjust as needed */
+}
+
+.profile-picture {
+    width: 150px; /* Adjust width of the profile picture as needed */
+    border-radius: 50%; /* Optional, for circular profile pictures */
+}
+
     </style>
 </head>
 <body>
@@ -133,19 +260,42 @@
             <a href="#contact">Contact</a>
         </nav>
     </header>
+<<<<<<< HEAD
     <div class="container">
         <section id="about">
             <center><h1>Md Muntasir Mahmud Amit</h1></center>
           <center>  <img src= "Pictures/Md_Muntasir_Mahmud_Amit_Profile_Picture.png" class="profile-picture"> </center>
           <center><p><strong>Undergraduate CSE student in BRAC University</strong></p></center>
+=======
+
+    <div class="container">
+        <section id="about">
+            <h1>Md Muntasir Mahmud Amit</h1>
+            <div class="profile-info">
+                <img src="Pictures/Md_Muntasir_Mahmud_Amit_Profile_Picture.png" class="profile-picture">
+            </div>
+            <p><strong>Undergraduate CSE student in BRAC University</strong></p>
+        </section>
+    </div>
+    
+>>>>>>> 5637d276ac2d93d79c14b8232df2e92bf9172871
             <h2>About Me</h2>
             <div class="about-content">
+                <!-- <div class="profile-info">
+                    <img src="Pictures/Md_Muntasir_Mahmud_Amit_Profile_Picture.png" class="profile-picture">
+                </div> -->
                 <div class="welcome-text">
                     <p>Assalamu Alaikum! I'm Md Muntasir Mahmud Amit, currently pursuing my undergraduate studies in Computer Science and Engineering at BRAC University. Beyond my core discipline, I'm passionate about exploring diverse fields. My interests span Software Engineering, Data Science, Artificial Intelligence, Machine Learning, and Natural Language Processing. I actively keep myself updated with the latest trends and advancements in these areas, always seeking opportunities to expand my skill set and make meaningful contributions across different domains. Additionally, I am highly interested in social works and making impactful positive change in the community. Through a range of academic and personal projects, I've showcased my dedication and proficiency in developing innovative tech solutions.</p>
                 </div>
+<<<<<<< HEAD
                 <div class="profile-info">
                     <!-- <img src= "https://github.com/mma1166/portfolio/blob/main/Pictures/Md_Muntasir_Mahmud_Amit_Profile_Picture.png" class="profile-picture"> -->
                 </div>
+=======
+                <!-- <div class="profile-info">
+                    <img src="Pictures/Md_Muntasir_Mahmud_Amit_Profile_Picture.png" class="profile-picture">
+                </div> -->
+>>>>>>> 5637d276ac2d93d79c14b8232df2e92bf9172871
             </div>
             <h3>Education</h3>
             <div class="education">
