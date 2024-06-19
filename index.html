@@ -121,12 +121,31 @@
                 text-align: justify;
             }
         }
+        .container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Optional, if you want to center vertically as well */
+    height: 40vh; /* Optional, sets container height to full viewport height */
+}
+
+#about {
+    text-align: center; /* Optional, for centering text inside the section */
+}
+
+.profile-info {
+    margin-top: 20px; /* Optional, adjust as needed */
+}
+
+.profile-picture {
+    width: 150px; /* Adjust width of the profile picture as needed */
+    border-radius: 50%; /* Optional, for circular profile pictures */
+}
+
     </style>
 </head>
 <body>
     <header>
-        <h1>Md Muntasir Mahmud Amit</h1>
-        <p>Undergraduate CSE student in BRAC University</p>
+        <h2>Md Muntasir Mahmud Amit's Portfolio</h2>
         <nav>
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
@@ -137,11 +156,19 @@
 
     <div class="container">
         <section id="about">
+            <h1>Md Muntasir Mahmud Amit</h1>
+            <div class="profile-info">
+                <img src="Pictures/Md_Muntasir_Mahmud_Amit_Profile_Picture.png" class="profile-picture">
+            </div>
+            <p><strong>Undergraduate CSE student in BRAC University</strong></p>
+        </section>
+    </div>
+    
             <h2>About Me</h2>
             <div class="about-content">
-                <div class="profile-info">
+                <!-- <div class="profile-info">
                     <img src="Pictures/Md_Muntasir_Mahmud_Amit_Profile_Picture.png" class="profile-picture">
-                </div>
+                </div> -->
                 <div class="welcome-text">
                     <p>Hello! I'm Md Muntasir Mahmud Amit, currently pursuing my undergraduate studies in Computer Science and Engineering at BRAC University. Beyond my core discipline, I'm passionate about exploring diverse fields. My interests span Software Engineering, Data Science, Artificial Intelligence, Machine Learning, and Natural Language Processing. I actively keep myself updated with the latest trends and advancements in these areas, always seeking opportunities to expand my skill set and make meaningful contributions across different domains. Additionally, I am highly interested in social works and making impactful positive change in the community. Through a range of academic and personal projects, I've showcased my dedication and proficiency in developing innovative tech solutions.</p>
                 </div>
