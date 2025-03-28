@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md Muntasir Mahmud Amit - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f0f8ff;
+            overflow-x: hidden;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        header {
+            background: #3471bcfa;
+            color: #fff;
+            padding: 8px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #007BFF;
+        }
+        section {
+            margin-top: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+        .project, .work-experience, .education {
+            margin-bottom: 20px;
+            background: #e0f7fa;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .contact-info a {
+            display: inline-block;
+            margin-right: 10px;
+            color: #333;
+            transition: color 0.3s;
+        }
+        .contact-info a:hover {
+            color: #007BFF;
+        }
+        .about-content {
+            display: flex; /* Use flexbox for layout */
+            align-items: flex-start; /* Align items at the top */
+            justify-content: space-between; /* Space items evenly */
+        }
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Make the picture circular */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            margin-left: 20px; /* Add some margin to the left of the picture */
+        }
+        .welcome-text {
+            flex: 1; /* Let the paragraph take remaining space */
+            text-align: justify; /* Justify text */
+        }
+        /* Adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column; /* Stack items vertically on smaller screens */
+                text-align: center;
+            }
+            .profile-picture {
+                margin: 0 auto 20px; /* Center the picture and add margin at the bottom */
+            }
+            .welcome-text {
+                margin: 0; /* Remove margin for smaller screens */
+                text-align: justify; /* Ensure justified text on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Md Muntasir Mahmud Amit's Portfolio</h2>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <div class="container">
+        <section id="about">
+            <center><h1>Md Muntasir Mahmud Amit</h1></center>
+          <center>  <img src= "Pictures/Md_Muntasir_Mahmud_Amit_Profile_Picture.png" class="profile-picture"> </center>
+          <center><p><strong>Undergraduate CSE student in BRAC University</strong></p></center>
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="welcome-text">
+                    <p>Assalamu Alaikum! I'm Md Muntasir Mahmud Amit, currently pursuing my undergraduate studies in Computer Science and Engineering at BRAC University. Beyond my core discipline, I'm passionate about exploring diverse fields. My interests span Software Engineering, Data Science, Artificial Intelligence, Machine Learning, and Natural Language Processing. I actively keep myself updated with the latest trends and advancements in these areas, always seeking opportunities to expand my skill set and make meaningful contributions across different domains. Additionally, I am highly interested in social works and making impactful positive change in the community. Through a range of academic and personal projects, I've showcased my dedication and proficiency in developing innovative tech solutions.</p>
+                </div>
+                <div class="profile-info">
+                    <!-- <img src= "https://github.com/mma1166/portfolio/blob/main/Pictures/Md_Muntasir_Mahmud_Amit_Profile_Picture.png" class="profile-picture"> -->
+                </div>
+            </div>
+            <h3>Education</h3>
+            <div class="education">
+                <p><strong><a href="http://cse.sds.bracu.ac.bd/">BRAC University</a></strong><br>
+                    Bachelor of Science in Computer Science and Engineering [Summer2021 - Present]</p>
+            </div>
+            <div class="education">
+                <p><strong><a href="https://milestonecollege.com/">Milestone College</a></strong><br>
+                Higher Secondary School Certificate (HSC) [2018-2020] </p>
+            </div>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Prime Number Identifier</h3>
+                <p>This project takes binary number as input and identifies whether it's a Prime Number or not</p>
+                <p><strong>Technologies Used:</strong> Digital Logic Designing.</p>
+                <p><strong>Used Components:</strong></p>
+                <ul>
+                    <li>Bread board</li>
+                    <li>Jumper Wires</li>
+                    <li>Power supply</li>
+                    <li>Resistor</li>
+                    <li>Switches</li>
+                    <li>And, Or, Not Gate</li>
+                </ul>
+                <a href="https://drive.google.com/drive/folders/1H397fvuDeRcffd2bOrdEAFlTJ8wIDugh?usp=sharing">Simulation of Proteus</a>
+            </div>
+            <div class="project">
+                <h3>ASUS Prime B460 Plus OpenCore Hackintosh</h3>
+                <p>This project involves setting up macOS Monterey on an ASUS Prime B460 Plus motherboard based system using OpenCore (0.7.7). The setup ensures that Mac Os Monterey runs simultaneously without any issue in non Apple Mentioned Hardware.</p>
+                <p><strong>Technologies Used:</strong> OpenCore, macOS Monterey, BIOS Configuration</p>
+                <a href="https://github.com/mma1166/ASUS-Prime-B460-Plus-OpenCore-Hackintosh">GitHub Link</a>
+                <p><strong>Highlights:</strong></p>
+                <ul>
+                    <li>Ensured full functionality of sleep, wake, audio, ethernet, DisplayPort, HDMI, and USB ports.</li>
+                    <li>Detailed documentation provided for replicating the setup.</li>
+                </ul>
+            </div>
+            <div class="project">
+                <h3>Flight Management Project</h3>
+                <p>This project involves the development of a comprehensive flight management system that handles flight scheduling, passenger bookings, and real-time flight tracking. The system is designed to streamline operations and improve the efficiency of airline services.</p>
+                <p><strong>Technologies Used:</strong>HTML, CSS, Bootstrap, PHP, SQL, JavaScript. </p>
+                <a href="https://github.com/mma1166/Flight-Management-Project">GitHub Link</a>
+                <p><strong>Highlights:</strong></p>
+                <ul>
+                    <li>Adding or cancelling flights from admin end.</li>
+                    <li>Seat status and flight details updating from admin end.</li>
+                    <li>Preferable Ticket Purchasing System from user end.</li>
+                </ul>
+            </div>
+
+            <div class="project">
+               <h3> Interactive Storytelling Platform </h3>
+                <p>This project is a web-based platform that allows users to create, share, and explore interactive stories. The platform provides tools for authors to craft their narratives and for readers to immerse themselves in diverse storytelling experiences.</p>
+                <p><strong>Technologies Used:</strong> Flutter, Firebase </p>
+                <p> <a href="https://github.com/MdSayemMottakee/Interactive-Storytelling-Platform">GitHub Link</a>
+                   (Currently under development)</p>
+                <p><strong>Highlights:</strong></p>
+                <ul>
+                    <li>Users can compose, publish, and interact with stories or thoughts.</li>
+                    <li> A feed-like format displays posts, with search and curated discovery features.</li>
+                    <li> Tools for reporting, moderation, privacy settings, and data security.</li>
+                    <li>    Accessible across devices with SEO optimization and comprehensive documentation.</li>
+                </ul>
+            </div>
+            <div class="project">
+                <h3> Diabetes Prediction System </h3>
+                 <p>This project is Machine Learning based project that allows users to predict the chances of being affected by diabetes using certain health related information.</p>
+                 <p><strong>Technologies Used:</strong> Machine Learning </p>
+                 <p> <a href="https://github.com/mma1166/Diabetes-Prediction-System-Using-Machine-Learning">GitHub Link</a> </p>
+                 <p> <a href="https://www.kaggle.com/datasets/iammustafatz/diabetes-prediction-dataset">Dataset Link</a> </p>
+                 <p><strong>Highlights:</strong></p>
+                 <ul>
+                     <li>Users can predict the chances of geeting affted by diabetes using the following prediction factors:</li>
+                        <ul><li>Gender	</li>
+                            <li>Age</li>	
+                            <li>Hypertension</li>	
+                            <li>Heart_disease</li>	
+                            <li>Smoking_history</li>	
+                            <li>BMI </li>	
+                            <li>HbA1c_level</li>	
+                            <li>Blood_glucose_level</li></ul>
+                    
+                 </ul>
+             </div>
+        </section>
+        <section id="experience">
+            <h2>Work Experience</h2>
+            <div class="work-experience">
+                <strong>Duration:</strong> 2021 - 2022</p>
+                <ul>
+                    <li><h3>Secretary of Human Resources at BRAC University Response Team</h3></li>
+                    <ul>
+                        <li><p>Awarded Best Performer of the Session 2021.</p></li>
+                    </ul>
+                    
+                   <li> <h3>Instructor of Project Srijon</h3> </li>
+                   <li> <h3>Senior Executive of Human Resource Management Department at BRAC University Adventure Club</h3></li>
+                </ul>
+               
+                
+            </div>
+            <div class="work-experience">
+                <p><strong>Duration:</strong> 2022 - 2023</p>
+                <ul>
+               <li><h3>Director of Operations at BRAC University Response Team</h3></li> 
+               <ul>
+               <li><p>Led team initiatives and managed operational tasks.</p></li> 
+               <li><p>Participated in Project Jibon, Blood Donation and Medical Camp.</p></li> 
+               </ul>  
+              <li><h3>Coordinator of Human Resource Management Department at BRAC University Adventure Club</h3></li>  
+            </ul>
+            </div>
+            <div class="work-experience">
+                <p><strong>Duration:</strong> 2023 - 2024</p>
+                <ul>
+                    <li>
+                        <h3>General Secretary at BRAC University Response Team</h3>
+                        <ul>
+                            <li>Organized Winter Campaign (A warm clothes and blanket distribution initiative for underprivileged individuals).</li>
+                            <li>Organized Project Hashimukh (An Iftar meals and ration distribution initiative for orphans during Ramadan).</li>
+                            <li>Organized Project Uttorn (A post-flood rehabilitation initiative for farmers of Feni District).</li>
+                            <li>Organized Blood Donation Campaign in collaboration with Bangladesh Red Crescent Society.</li>
+                            <li>Organized Breast Cancer Awareness Program and free screening session in collaboration with Lab Aid Cancer Hospital.</li>
+                            <li>Organized Fundraising initiative for a BRAC Business School Alumni, Imtiaz Rabbi, who is fighting osteosarcoma.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>You can reach me through the following platforms:</p>
+            <div class="contact-info">
+                <a href="mailto:muntasir145@gmail.com"><i class="fas fa-envelope"></i> muntasir145@gmail.com</a>
+                <a href="https://www.linkedin.com/in/mma1166/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/mma1166" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://www.facebook.com/mma1166" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="https://www.instagram.com/muntasir_amit/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://x.com/MuntasirAmit" target="_blank"><i class="fab fa-x"></i></a>
+                <a href="https://t.me/mma1166" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Md Muntasir Mahmud Amit</p>
+        <a href="#about">About</a> |
+        <a href="#projects">Projects</a> |
+        <a href="#experience">Experience</a> |
+        <a href="#contact">Contact</a>
+    </footer>
+</body>
+</html>
