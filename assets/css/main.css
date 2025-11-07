@@ -17,24 +17,22 @@
   --nav-font: "Poppins",  sans-serif;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+/* Global Colors - Light theme default */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #45505b; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #0563bb; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
-}
-
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
-:root {
-  --nav-color: #45505b;  /* The default color of the main navmenu links */
-  --nav-hover-color: #0563bb; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #0563bb; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --background-color: #ffffff;
+  --section-bg-color: #f7f8f9;
+  --default-color: #272829;
+  --heading-color: #45505b;
+  --accent-color: #0563bb;
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+  --border-color: #ddd;
+  --nav-color: #45505b;
+  --nav-hover-color: #0563bb;
+  --nav-mobile-background-color: #ffffff;
+  --nav-dropdown-background-color: #ffffff;
+  --nav-dropdown-color: #212529;
+  --nav-dropdown-hover-color: #0563bb;
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -44,12 +42,228 @@
   --surface-color: #ffffff;
 }
 
-.dark-background {
-  --background-color: #060606;
-  --default-color: #ffffff;
+/* Dark theme colors */
+.dark-theme {
+  --background-color: #121212;
+  --section-bg-color: #1a1a1a;
+  --card-bg-color: #242424;
+  --default-color: #f0f0f0;
+  --heading-color: #f0f0f0;
+  --accordion-bg-color: #242424;
+  --accordion-text-color: #f0f0f0;
+  --accordion-button-bg: #242424;
+  --accordion-button-color: #f0f0f0;
+  --accordion-border-color: #333;
+}
+
+/* Dark theme specific styles */
+.dark-theme .accordion-item {
+  background-color: var(--accordion-bg-color);
+  border-color: var(--accordion-border-color);
+}
+
+.dark-theme .accordion-button {
+  background-color: var(--accordion-button-bg);
+  color: var(--accordion-button-color);
+}
+
+.dark-theme .accordion-button:not(.collapsed) {
+  background-color: var(--accordion-button-bg);
+  color: var(--accordion-text-color);
+}
+
+.dark-theme .accordion-body {
+  background-color: var(--accordion-bg-color);
+  color: var(--accordion-text-color);
+}
+
+.dark-theme .accordion-button::after {
+  filter: invert(1);
+}
   --heading-color: #ffffff;
-  --surface-color: #252525;
+  --accent-color: #4da3ff;
+  --surface-color: #1a1a1a;
   --contrast-color: #ffffff;
+  --border-color: #333333;
+  --nav-color: #f0f0f0;
+  --nav-hover-color: #4da3ff;
+  --nav-mobile-background-color: #242424;
+  --nav-dropdown-background-color: #242424;
+  --nav-dropdown-color: #f0f0f0;
+  --nav-dropdown-hover-color: #4da3ff;
+}
+
+/* Section backgrounds in dark mode */
+.dark-theme section {
+  background-color: var(--background-color);
+}
+
+.dark-theme .section-bg {
+  background-color: var(--section-bg-color);
+}
+
+/* Research section specific styles */
+.dark-theme .research {
+  background-color: var(--background-color);
+  color: var(--default-color);
+  padding: 2rem 0;
+}
+
+.dark-theme .research .card {
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.dark-theme .research .card-body {
+  color: var(--default-color);
+  background-color: var(--card-bg-color);
+}
+
+.dark-theme .research .card-title a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.dark-theme .research .card-title a:hover {
+  text-decoration: underline;
+}
+
+.dark-theme .research .card-text {
+  color: var(--default-color);
+}
+
+.dark-theme .research ul li {
+  color: var(--default-color);
+  margin-bottom: 0.5rem;
+}
+
+/* General card styles */
+.dark-theme .card {
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.dark-theme .card-body {
+  background-color: var(--card-bg-color);
+}
+
+.dark-theme .card-title {
+  color: var(--heading-color);
+}
+
+/* List text visibility in dark mode */
+.dark-theme ul,
+.dark-theme ol,
+.dark-theme li,
+.dark-theme .card ul,
+.dark-theme .card ol,
+.dark-theme .card li {
+  color: #e0e0e0;
+}
+
+.dark-theme ul.list-unstyled li,
+.dark-theme .card ul.list-unstyled li {
+  color: #e0e0e0;
+}
+
+/* Ensure list items with icons are visible */
+.dark-theme .bi::before {
+  color: #e0e0e0;
+}
+
+/* Make bullets and numbers visible */
+.dark-theme ul li::marker,
+.dark-theme ol li::marker {
+  color: #4da3ff;
+}
+
+/* Research section dark mode improvements */
+.dark-theme .research {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 2rem 0;
+}
+
+.dark-theme .research h3,
+.dark-theme .research .h3 {
+  color: #4da3ff;
+  margin-bottom: 1.5rem;
+}
+
+.dark-theme .research p {
+  color: #ffffff;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.dark-theme .research ul {
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+  list-style: none;
+}
+
+.dark-theme .research ul li {
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.dark-theme .research ul li::before {
+  content: "•";
+  color: #4da3ff;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Improve link visibility in research section */
+.dark-theme .research a {
+  color: #4da3ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.dark-theme .research a:hover {
+  color: #66b1ff;
+  text-decoration: underline;
+}
+
+/* Ensure section background extends full width */
+.dark-theme section.research-section {
+  background-color: #000000;
+  margin: 0;
+  width: 100%;
+}
+
+.dark-theme .section-bg {
+  background-color: #1e1e1e;
+}
+
+/* Ensure links are visible in dark mode */
+.dark-theme .card a {
+  color: #4da3ff;
+}
+
+.dark-theme .card a:hover {
+  color: #66b1ff;
+}
+
+/* Improve text contrast in dark mode */
+.dark-theme p,
+.dark-theme .text-body-secondary {
+  color: #e0e0e0 !important;
+}
+
+/* Project card hover effect */
+.dark-theme .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3) !important;
+  border-color: #4da3ff;
+  transition: all 0.3s ease;
 }
 
 /* Smooth scroll */
@@ -64,6 +278,16 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
+}
+
+/* Smooth theme transition for color changes */
+body,
+.section,
+.card,
+.navmenu a,
+.header,
+.footer {
+  transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
 }
 
 a {
@@ -227,21 +451,24 @@ h6 {
   margin-bottom: 8px;
   font-size: 15px;
   border-radius: 50px;
-  background: color-mix(in srgb, var(--default-color), transparent 92%);
+  background: rgba(0, 0, 0, 0.1);
   height: 56px;
   width: 100%;
   overflow: hidden;
   transition: 0.3s;
+  backdrop-filter: blur(5px);
 }
 
 .navmenu a i,
 .navmenu a:focus i {
   font-size: 20px;
+  color: var(--accent-color);
 }
 
 .navmenu a span,
 .navmenu a:focus span {
   padding: 0 5px 0 7px;
+  font-weight: 500;
 }
 
 @media (min-width: 992px) {
@@ -262,7 +489,8 @@ h6 {
 .navmenu .active:focus,
 .navmenu li:hover>a {
   color: var(--contrast-color);
-  background: var(--nav-hover-color);
+  background: var(--accent-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .navmenu a:hover,
@@ -329,6 +557,7 @@ h6 {
 }
 
 .footer .copyright {
+  text-align: center;
   padding-top: 25px;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
@@ -537,10 +766,20 @@ section,
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.4)
+  );
   position: absolute;
   inset: 0;
   z-index: 2;
+}
+
+.dark-theme .hero:before {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.7)
+  );
 }
 
 .hero .container {
@@ -552,16 +791,29 @@ section,
   margin: 0;
   font-size: 64px;
   font-weight: 700;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero p {
   margin: 5px 0 0 0;
   font-size: 26px;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .hero p span {
   letter-spacing: 1px;
   border-bottom: 2px solid var(--accent-color);
+  color: #ffffff;
+}
+
+/* Dark theme specific styles - slightly stronger shadows */
+.dark-theme .hero h2,
+.dark-theme .hero p,
+.dark-theme .hero p span {
+  color: #ffffff;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
 }
 
 .hero .social-links {
@@ -569,16 +821,25 @@ section,
 }
 
 .hero .social-links a {
-  font-size: 20px;
+  font-size: 24px;
   display: inline-block;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: #ffffff;
   line-height: 1;
   margin-right: 20px;
   transition: 0.3s;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  opacity: 0.9;
 }
 
 .hero .social-links a:hover {
   color: var(--accent-color);
+  transform: translateY(-2px);
+  opacity: 1;
+}
+
+/* Dark theme social icons */
+.dark-theme .hero .social-links a {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 @media (max-width: 768px) {
@@ -719,6 +980,198 @@ section,
   line-height: 18px;
   font-size: 18px;
   font-weight: 600;
+
+/*--------------------------------------------------------------
+# Theme Toggle Button
+--------------------------------------------------------------*/
+#theme-toggle {
+  display: none !important;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 9999;
+  gap: 8px;
+  padding: 6px 10px;
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+  background: var(--surface-color);
+  color: var(--default-color);
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  font-size: 14px;
+}
+
+#theme-toggle i {
+  font-size: 18px;
+}
+
+#theme-toggle:hover {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+/* Accessible focus style for the theme switch */
+#theme-toggle:focus {
+  outline: 3px solid color-mix(in srgb, var(--accent-color) 35%, transparent 65%);
+  outline-offset: 2px;
+}
+
+/* Visual state when the switch is ON (dark) */
+#theme-toggle[aria-checked="true"] {
+  background: color-mix(in srgb, var(--accent-color) 10%, var(--surface-color));
+  color: var(--contrast-color);
+  border-color: color-mix(in srgb, var(--accent-color) 20%, transparent 80%);
+}
+
+/* Card / surface adjustments to ensure contrast in dark theme */
+:root {
+  --card-bg: var(--surface-color);
+  --card-border: color-mix(in srgb, var(--default-color), transparent 88%);
+}
+
+/* Dark theme variable overrides */
+body.dark-theme {
+  --background-color: #0b0b0d;
+  --default-color: #e6e6e6;
+  --heading-color: #ffffff;
+  --accent-color: #3aa0ff;
+  --surface-color: #121214;
+  --contrast-color: #ffffff;
+  --nav-color: #cfcfcf;
+  --nav-hover-color: #0563bb;
+  --nav-mobile-background-color: #0b0b0d;
+  --nav-dropdown-background-color: #121214;
+  --nav-dropdown-color: #e6e6e6;
+  --card-bg: #1a1a1a;
+  --card-border: color-mix(in srgb, #ffffff, transparent 92%);
+}
+
+/* Ensure elements that explicitly use .light-background switch in dark mode too */
+body.dark-theme .light-background {
+  --background-color: #0b0b0d;
+  --surface-color: #121214;
+  --default-color: #e6e6e6;
+  --heading-color: #ffffff;
+}
+
+/* Hero-specific overlay and image treatment in dark mode */
+body.dark-theme .hero:before {
+  background: color-mix(in srgb, var(--background-color), transparent 40%);
+}
+
+/* Make sure section titles remain readable */
+body.dark-theme .section-title h2:before {
+  background: color-mix(in srgb, var(--default-color), transparent 60%);
+}
+
+/* Navmenu background for mobile when dark */
+body.dark-theme .header {
+  background-color: var(--background-color);
+}
+
+/* Ensure cards (project, thesis etc.) use the card bg in dark mode */
+body.dark-theme .card {
+  background: var(--card-bg) !important;
+  color: var(--default-color) !important;
+}
+
+/* Apply card background and borders using variables */
+.card {
+  background: var(--card-bg);
+  color: var(--default-color);
+  border: 1px solid var(--card-border);
+}
+
+/* Sliding switch visuals */
+#theme-toggle.switch {
+  min-width: 88px;
+  padding: 6px 10px;
+}
+
+#theme-toggle .switch-track {
+  --track-w: 44px;
+  width: var(--track-w);
+  height: 22px;
+  background: color-mix(in srgb, var(--default-color), transparent 88%);
+  border-radius: 999px;
+  position: relative;
+  display: inline-block;
+  flex: 0 0 auto;
+  transition: background-color 0.25s ease;
+}
+
+#theme-toggle .switch-thumb {
+  width: 18px;
+  height: 18px;
+  background: var(--contrast-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  transform: translateY(-50%);
+  transition: transform 0.25s ease, background 0.2s ease;
+}
+
+#theme-toggle .switch-thumb i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  color: var(--surface-color);
+}
+
+#theme-toggle .switch-label {
+  font-size: 13px;
+  line-height: 1;
+  color: var(--default-color);
+  margin-left: 8px;
+}
+
+#theme-toggle.on .switch-track {
+  background: var(--accent-color);
+}
+
+#theme-toggle.on .switch-thumb {
+  transform: translateY(-50%) translateX(20px);
+  background: var(--contrast-color);
+}
+
+#theme-toggle.on .switch-label {
+  color: var(--contrast-color);
+}
+
+.navmenu {
+  background: transparent;
+}
+
+.navmenu a,
+.navmenu a:focus {
+  background: color-mix(in srgb, var(--default-color), transparent 92%);
+  color: var(--nav-color);
+}
+
+.header {
+  background: var(--background-color);
+}
+
+/*--------------------------------------------------------------
+# Dark theme variable overrides
+--------------------------------------------------------------*/
+body.dark-theme {
+  --background-color: #0b0b0d;
+  --default-color: #e6e6e6;
+  --heading-color: #ffffff;
+  --accent-color: #3aa0ff;
+  --surface-color: #121214;
+  --contrast-color: #ffffff;
+  --nav-color: #cfcfcf;
+  --nav-hover-color: #0563bb;
+  --nav-mobile-background-color: #0b0b0d;
+  --nav-dropdown-background-color: #121214;
+  --nav-dropdown-color: #e6e6e6;
+}
   text-transform: uppercase;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin-bottom: 10px;

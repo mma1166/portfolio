@@ -15,11 +15,15 @@
   const headerToggleBtn = document.querySelector('.header-toggle');
 
   function headerToggle() {
-    document.querySelector('#header').classList.toggle('header-show');
-    headerToggleBtn.classList.toggle('bi-list');
-    headerToggleBtn.classList.toggle('bi-x');
+    const header = document.querySelector('#header');
+    if (!header) return;
+    header.classList.toggle('header-show');
+    if (headerToggleBtn) {
+      headerToggleBtn.classList.toggle('bi-list');
+      headerToggleBtn.classList.toggle('bi-x');
+    }
   }
-  headerToggleBtn.addEventListener('click', headerToggle);
+  if (headerToggleBtn) headerToggleBtn.addEventListener('click', headerToggle);
 
   /**
    * Hide mobile nav on same-page/hash links
@@ -65,13 +69,15 @@
       window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
     }
   }
-  scrollTop.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+  if (scrollTop) {
+    scrollTop.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     });
-  });
+  }
 
   window.addEventListener('load', toggleScrollTop);
   document.addEventListener('scroll', toggleScrollTop);
@@ -225,5 +231,81 @@
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
+
+  /**
+   * Theme toggle (dark mode)
+   */
+  const themeToggleBtn = document.getElementById('theme-toggle');
+
+  function updateThemeIcon(isDark) {
+    if (!themeToggleBtn) return;
+    themeToggleBtn.setAttribute('aria-checked', isDark);
+    const thumbIcon = themeToggleBtn.querySelector('.switch-thumb i');
+    if (thumbIcon) {
+      if (isDark) {
+        thumbIcon.classList.remove('bi-moon');
+        thumbIcon.classList.add('bi-sun');
+        themeToggleBtn.classList.add('on');
+      } else {
+        thumbIcon.classList.remove('bi-sun');
+        thumbIcon.classList.add('bi-moon');
+        themeToggleBtn.classList.remove('on');
+      }
+    }
+  }
+
+  function applyTheme(theme) {
+    if (theme === 'dark') document.body.classList.add('dark-theme');
+    else document.body.classList.remove('dark-theme');
+    updateThemeIcon(theme === 'dark');
+  }
+
+  function initTheme() {
+    applyTheme('dark');
+  }
+
+  if (themeToggleBtn) {
+    const toggleTheme = (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      const isDark = !document.body.classList.contains('dark-theme');
+      document.body.classList.toggle('dark-theme', isDark);
+      themeToggleBtn.setAttribute('aria-checked', isDark);
+      try { localStorage.setItem('site-theme', isDark ? 'dark' : 'light'); } catch (err) { console.log('[theme] localStorage set error', err); }
+      updateThemeIcon(isDark);
+      console.log('[theme] theme toggled to', isDark ? 'dark' : 'light');
+    };
+
+    // Click handler
+    themeToggleBtn.addEventListener('click', toggleTheme, false);
+
+    // Keyboard support: toggle on Space or Enter
+    themeToggleBtn.addEventListener('keydown', (e) => {
+      if (e.key === ' ' || e.key === 'Spacebar' || e.key === 'Enter') {
+        e.preventDefault();
+        toggleTheme(e);
+      }
+    }, false);
+  }
+  // Removed fallback click handler - using direct button handler only
+
+  document.addEventListener('keydown', function(e) {
+    try {
+      const active = document.activeElement;
+      if (!active) return;
+      const isWithin = active.id === 'theme-toggle' || (active.closest && active.closest('#theme-toggle'));
+      if (!isWithin) return;
+      if (e.key === ' ' || e.key === 'Spacebar' || e.key === 'Enter') {
+        e.preventDefault();
+        const isDark = document.body.classList.toggle('dark-theme');
+        try { localStorage.setItem('site-theme', isDark ? 'dark' : 'light'); } catch (err) {}
+        updateThemeIcon(isDark);
+      }
+    } catch (err) {
+      console.error('Theme toggle keydown fallback error', err);
+    }
+  }, false);
+
+  window.addEventListener('load', initTheme);
 
 })();
