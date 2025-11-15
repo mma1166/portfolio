@@ -180,8 +180,7 @@
 }
 
 /* Research section dark mode improvements */
-.dark-theme .research {
-  background-color: #000000;
+.dark-theme .research {;
   color: #ffffff;
   padding: 2rem 0;
 }
